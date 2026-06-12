@@ -1,0 +1,49 @@
+{% extends "layout.html" %}
+{% block content %}
+<section class="card">
+    <div class="section-header">
+        <div>
+            <h2>Listado de trámites</h2>
+            <p>Expedientes registrados y evaluados por el modelo de Machine Learning.</p>
+        </div>
+        <a class="button" href="{{ url_for('registrar') }}">Nuevo trámite</a>
+    </div>
+
+    {% if tramites %}
+    <div class="table-wrapper">
+        <table>
+            <thead>
+                <tr>
+                    <th>Código</th>
+                    <th>Ciudadano</th>
+                    <th>Tipo</th>
+                    <th>Área</th>
+                    <th>Riesgo</th>
+                    <th>Prioridad</th>
+                    <th>Estado</th>
+                    <th>Fecha</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for t in tramites %}
+                <tr>
+                    <td>{{ t.codigo }}</td>
+                    <td>{{ t.nombres }}</td>
+                    <td>{{ t.tipo_tramite }}</td>
+                    <td>{{ t.area }}</td>
+                    <td><span class="badge riesgo-{{ t.riesgo_retraso|lower }}">{{ t.riesgo_retraso }}</span></td>
+                    <td>{{ t.prioridad }}</td>
+                    <td>{{ t.estado }}</td>
+                    <td>{{ t.fecha_registro }}</td>
+                    <td><a href="{{ url_for('detalle_tramite', tramite_id=t.id) }}">Ver</a></td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+    {% else %}
+        <p>No hay trámites registrados todavía.</p>
+    {% endif %}
+</section>
+{% endblock %}

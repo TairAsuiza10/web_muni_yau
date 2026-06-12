@@ -1,0 +1,72 @@
+{% extends "layout.html" %}
+{% block content %}
+<section class="card">
+    <h2>Reportes de gestión</h2>
+    <p>Indicadores básicos para identificar carga de trabajo, riesgo y estado de expedientes.</p>
+    <div class="kpi">
+        <div>
+            <span>Total de trámites</span>
+            <strong>{{ total }}</strong>
+        </div>
+    </div>
+</section>
+
+<section class="report-grid">
+    <div class="card">
+        <h3>Trámites por riesgo</h3>
+        <table>
+            {% for r in por_riesgo %}
+            <tr><td>{{ r.riesgo_retraso }}</td><td>{{ r.total }}</td></tr>
+            {% endfor %}
+        </table>
+    </div>
+    <div class="card">
+        <h3>Trámites por estado</h3>
+        <table>
+            {% for e in por_estado %}
+            <tr><td>{{ e.estado }}</td><td>{{ e.total }}</td></tr>
+            {% endfor %}
+        </table>
+    </div>
+    <div class="card">
+        <h3>Trámites por área</h3>
+        <table>
+            {% for a in por_area %}
+            <tr><td>{{ a.area }}</td><td>{{ a.total }}</td></tr>
+            {% endfor %}
+        </table>
+    </div>
+</section>
+
+<section class="card">
+    <h2>Top trámites críticos</h2>
+    {% if criticos %}
+    <table>
+        <thead>
+            <tr>
+                <th>Código</th>
+                <th>Ciudadano</th>
+                <th>Tipo</th>
+                <th>Área</th>
+                <th>Probabilidad</th>
+                <th>Estado</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for c in criticos %}
+            <tr>
+                <td><a href="{{ url_for('detalle_tramite', tramite_id=c.id) }}">{{ c.codigo }}</a></td>
+                <td>{{ c.nombres }}</td>
+                <td>{{ c.tipo_tramite }}</td>
+                <td>{{ c.area }}</td>
+                <td>{{ '%.2f'|format(c.probabilidad * 100) }}%</td>
+                <td>{{ c.estado }}</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+    {% else %}
+        <p>No hay trámites críticos registrados.</p>
+    {% endif %}
+</section>
+{% endblock %}

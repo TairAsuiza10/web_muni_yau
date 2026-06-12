@@ -1,0 +1,66 @@
+{% extends "layout.html" %}
+{% block content %}
+<section class="card">
+    <h2>Registrar nuevo trámite</h2>
+    <p>Complete los datos. El sistema calculará automáticamente el riesgo de retraso.</p>
+
+    <form method="post" class="form-grid">
+        <h3>Datos del ciudadano</h3>
+        <label>DNI
+            <input type="text" name="dni" required placeholder="Ej. 71234567">
+        </label>
+        <label>Nombres y apellidos
+            <input type="text" name="nombres" required placeholder="Ej. Juan Pérez Silva">
+        </label>
+        <label>Teléfono
+            <input type="text" name="telefono" placeholder="Ej. 999999999">
+        </label>
+        <label>Correo
+            <input type="email" name="correo" placeholder="ciudadano@correo.com">
+        </label>
+        <label class="full">Dirección
+            <input type="text" name="direccion" placeholder="Dirección del ciudadano">
+        </label>
+
+        <h3>Datos del trámite</h3>
+        <label>Tipo de trámite
+            <select name="tipo_tramite" required>
+                {% for item in tipos_tramite %}
+                    <option value="{{ item }}">{{ item }}</option>
+                {% endfor %}
+            </select>
+        </label>
+        <label>Área responsable
+            <select name="area" required>
+                {% for item in areas %}
+                    <option value="{{ item }}">{{ item }}</option>
+                {% endfor %}
+            </select>
+        </label>
+        <label>Documentos completos
+            <select name="documentos_completos" required>
+                <option value="Si">Sí</option>
+                <option value="No">No</option>
+            </select>
+        </label>
+        <label>Número de derivaciones
+            <input type="number" name="num_derivaciones" min="1" max="10" value="1" required>
+        </label>
+        <label>Días transcurridos
+            <input type="number" name="dias_transcurridos" min="0" max="100" value="1" required>
+        </label>
+        <label>Carga del área
+            <select name="carga_area" required>
+                {% for item in cargas %}
+                    <option value="{{ item }}">{{ item }}</option>
+                {% endfor %}
+            </select>
+        </label>
+
+        <div class="full actions">
+            <button class="button" type="submit">Registrar y predecir riesgo</button>
+            <a class="button secondary" href="{{ url_for('index') }}">Cancelar</a>
+        </div>
+    </form>
+</section>
+{% endblock %}

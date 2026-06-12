@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{{ title or 'Municipalidad de Yau - Sistema ML' }}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <header class="topbar">
+        <div>
+            <h1>Sistema Inteligente de Trámites</h1>
+            <p>Municipalidad Provincial de Yau</p>
+        </div>
+        <nav>
+            <a href="{{ url_for('index') }}">Trámites</a>
+            <a href="{{ url_for('registrar') }}">Registrar</a>
+            <a href="{{ url_for('reportes') }}">Reportes</a>
+        </nav>
+    </header>
+
+    <main class="container">
+        {% with messages = get_flashed_messages(with_categories=true) %}
+            {% if messages %}
+                {% for category, message in messages %}
+                    <div class="alert {{ category }}">{{ message }}</div>
+                {% endfor %}
+            {% endif %}
+        {% endwith %}
+
+        {% block content %}{% endblock %}
+    </main>
+</body>
+</html>

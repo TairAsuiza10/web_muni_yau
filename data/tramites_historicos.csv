@@ -1,0 +1,351 @@
+id_historico,tipo_tramite,area,documentos_completos,num_derivaciones,dias_transcurridos,carga_area,riesgo_retraso
+1,Permiso de construccion,Mesa de partes,No,2,24,Baja,Alto
+2,Permiso de construccion,Atencion al ciudadano,Si,1,18,Baja,Medio
+3,Licencia de funcionamiento,Atencion al ciudadano,Si,6,18,Media,Alto
+4,Permiso para evento,Atencion al ciudadano,Si,1,12,Alta,Medio
+5,Acceso a informacion publica,Obras privadas,Si,3,12,Baja,Bajo
+6,Permiso de construccion,Obras privadas,No,5,27,Baja,Alto
+7,Permiso de construccion,Catastro,Si,3,26,Alta,Alto
+8,Certificado de residencia,Asesoria legal,Si,6,7,Baja,Bajo
+9,Certificado de residencia,Mesa de partes,Si,4,9,Media,Bajo
+10,Acceso a informacion publica,Obras privadas,Si,3,7,Media,Bajo
+11,Constancia de posesion,Atencion al ciudadano,No,2,20,Media,Alto
+12,Certificado de residencia,Asesoria legal,Si,1,2,Baja,Bajo
+13,Acceso a informacion publica,Catastro,Si,2,14,Alta,Medio
+14,Permiso para evento,Catastro,No,6,15,Media,Alto
+15,Reclamo ciudadano,Asesoria legal,Si,5,9,Media,Medio
+16,Permiso para evento,Mesa de partes,No,1,15,Baja,Medio
+17,Pago de arbitrios,Atencion al ciudadano,Si,4,14,Media,Medio
+18,Reclamo ciudadano,Atencion al ciudadano,No,1,13,Media,Alto
+19,Reclamo ciudadano,Asesoria legal,Si,3,11,Media,Bajo
+20,Licencia de funcionamiento,Asesoria legal,No,3,21,Alta,Alto
+21,Reclamo ciudadano,Asesoria legal,Si,2,6,Baja,Bajo
+22,Licencia de funcionamiento,Atencion al ciudadano,Si,1,15,Baja,Medio
+23,Reclamo ciudadano,Desarrollo economico,Si,5,11,Alta,Medio
+24,Constancia de posesion,Desarrollo economico,Si,5,21,Baja,Alto
+25,Pago de arbitrios,Desarrollo economico,No,6,15,Media,Alto
+26,Permiso para evento,Atencion al ciudadano,Si,2,10,Baja,Bajo
+27,Licencia de funcionamiento,Atencion al ciudadano,Si,5,12,Baja,Alto
+28,Certificado de residencia,Mesa de partes,No,3,10,Baja,Bajo
+29,Permiso para evento,Desarrollo economico,Si,6,19,Alta,Alto
+30,Pago de arbitrios,Desarrollo economico,Si,6,12,Media,Medio
+31,Permiso para evento,Asesoria legal,Si,6,12,Alta,Alto
+32,Acceso a informacion publica,Mesa de partes,Si,2,8,Media,Bajo
+33,Pago de arbitrios,Desarrollo economico,Si,2,8,Alta,Bajo
+34,Permiso de construccion,Mesa de partes,Si,5,21,Alta,Alto
+35,Pago de arbitrios,Catastro,Si,4,10,Alta,Medio
+36,Pago de arbitrios,Obras privadas,No,4,22,Baja,Alto
+37,Constancia de posesion,Desarrollo economico,Si,1,16,Media,Medio
+38,Licencia de funcionamiento,Asesoria legal,Si,1,18,Media,Medio
+39,Constancia de posesion,Mesa de partes,No,1,18,Alta,Alto
+40,Certificado de residencia,Catastro,Si,5,7,Baja,Bajo
+41,Permiso de construccion,Catastro,Si,5,21,Media,Alto
+42,Acceso a informacion publica,Desarrollo economico,Si,2,10,Media,Bajo
+43,Permiso para evento,Obras privadas,No,1,9,Baja,Medio
+44,Certificado de residencia,Atencion al ciudadano,Si,3,9,Alta,Bajo
+45,Reclamo ciudadano,Desarrollo economico,Si,5,13,Media,Medio
+46,Reclamo ciudadano,Asesoria legal,Si,2,5,Baja,Bajo
+47,Constancia de posesion,Obras privadas,Si,2,11,Media,Medio
+48,Reclamo ciudadano,Atencion al ciudadano,Si,1,10,Baja,Bajo
+49,Reclamo ciudadano,Mesa de partes,Si,2,8,Media,Bajo
+50,Constancia de posesion,Asesoria legal,Si,6,9,Media,Medio
+51,Permiso de construccion,Asesoria legal,No,5,32,Baja,Alto
+52,Constancia de posesion,Catastro,Si,3,8,Media,Medio
+53,Acceso a informacion publica,Desarrollo economico,Si,6,18,Baja,Medio
+54,Constancia de posesion,Desarrollo economico,No,2,16,Alta,Alto
+55,Pago de arbitrios,Asesoria legal,No,2,9,Baja,Medio
+56,Licencia de funcionamiento,Catastro,Si,4,15,Media,Alto
+57,Licencia de funcionamiento,Asesoria legal,Si,3,11,Baja,Bajo
+58,Reclamo ciudadano,Obras privadas,Si,4,15,Media,Medio
+59,Licencia de funcionamiento,Mesa de partes,No,3,17,Baja,Alto
+60,Permiso de construccion,Atencion al ciudadano,Si,6,32,Alta,Alto
+61,Permiso de construccion,Catastro,No,2,24,Baja,Alto
+62,Certificado de residencia,Obras privadas,Si,6,12,Alta,Medio
+63,Reclamo ciudadano,Asesoria legal,Si,4,14,Media,Medio
+64,Certificado de residencia,Catastro,Si,4,9,Media,Bajo
+65,Reclamo ciudadano,Catastro,Si,1,7,Media,Bajo
+66,Pago de arbitrios,Atencion al ciudadano,Si,3,9,Media,Bajo
+67,Certificado de residencia,Atencion al ciudadano,Si,6,6,Baja,Bajo
+68,Acceso a informacion publica,Mesa de partes,No,2,13,Media,Alto
+69,Constancia de posesion,Mesa de partes,Si,4,13,Media,Alto
+70,Pago de arbitrios,Asesoria legal,Si,6,13,Media,Medio
+71,Certificado de residencia,Desarrollo economico,Si,1,8,Alta,Bajo
+72,Certificado de residencia,Desarrollo economico,No,6,11,Media,Medio
+73,Permiso de construccion,Catastro,Si,4,28,Media,Alto
+74,Acceso a informacion publica,Catastro,Si,6,22,Alta,Alto
+75,Constancia de posesion,Asesoria legal,No,4,22,Baja,Alto
+76,Permiso para evento,Asesoria legal,Si,4,11,Baja,Bajo
+77,Reclamo ciudadano,Obras privadas,Si,5,8,Baja,Bajo
+78,Pago de arbitrios,Asesoria legal,Si,2,8,Baja,Bajo
+79,Acceso a informacion publica,Atencion al ciudadano,Si,1,12,Baja,Bajo
+80,Pago de arbitrios,Atencion al ciudadano,No,1,16,Alta,Alto
+81,Acceso a informacion publica,Obras privadas,No,4,23,Media,Alto
+82,Permiso para evento,Desarrollo economico,Si,4,14,Baja,Medio
+83,Constancia de posesion,Catastro,No,5,26,Media,Alto
+84,Licencia de funcionamiento,Mesa de partes,Si,2,14,Alta,Alto
+85,Reclamo ciudadano,Catastro,Si,4,13,Media,Medio
+86,Pago de arbitrios,Obras privadas,No,4,16,Baja,Alto
+87,Certificado de residencia,Asesoria legal,Si,6,4,Baja,Bajo
+88,Certificado de residencia,Mesa de partes,Si,2,3,Baja,Bajo
+89,Certificado de residencia,Catastro,Si,3,3,Baja,Bajo
+90,Constancia de posesion,Obras privadas,Si,1,19,Alta,Alto
+91,Certificado de residencia,Mesa de partes,Si,6,11,Baja,Bajo
+92,Permiso de construccion,Atencion al ciudadano,No,3,23,Media,Alto
+93,Acceso a informacion publica,Mesa de partes,No,4,23,Baja,Alto
+94,Constancia de posesion,Catastro,Si,5,23,Alta,Alto
+95,Permiso para evento,Catastro,Si,6,12,Media,Medio
+96,Permiso de construccion,Obras privadas,No,2,28,Alta,Alto
+97,Permiso para evento,Obras privadas,Si,2,9,Media,Bajo
+98,Acceso a informacion publica,Obras privadas,No,6,25,Alta,Alto
+99,Permiso de construccion,Desarrollo economico,No,4,30,Media,Alto
+100,Permiso para evento,Catastro,No,1,19,Baja,Medio
+101,Certificado de residencia,Obras privadas,Si,3,10,Media,Bajo
+102,Acceso a informacion publica,Catastro,No,5,21,Media,Alto
+103,Reclamo ciudadano,Desarrollo economico,Si,2,12,Media,Medio
+104,Constancia de posesion,Desarrollo economico,Si,4,21,Baja,Alto
+105,Reclamo ciudadano,Mesa de partes,No,3,11,Baja,Medio
+106,Licencia de funcionamiento,Asesoria legal,Si,3,10,Baja,Bajo
+107,Reclamo ciudadano,Asesoria legal,No,6,21,Alta,Alto
+108,Reclamo ciudadano,Catastro,Si,3,4,Baja,Bajo
+109,Reclamo ciudadano,Catastro,Si,1,5,Media,Bajo
+110,Licencia de funcionamiento,Desarrollo economico,Si,5,15,Alta,Alto
+111,Pago de arbitrios,Atencion al ciudadano,Si,5,14,Baja,Medio
+112,Permiso para evento,Catastro,Si,5,20,Alta,Alto
+113,Licencia de funcionamiento,Atencion al ciudadano,No,1,24,Alta,Alto
+114,Reclamo ciudadano,Asesoria legal,Si,2,5,Baja,Bajo
+115,Constancia de posesion,Mesa de partes,Si,6,13,Media,Alto
+116,Certificado de residencia,Obras privadas,No,6,17,Alta,Alto
+117,Certificado de residencia,Catastro,Si,2,6,Media,Bajo
+118,Constancia de posesion,Mesa de partes,Si,3,12,Media,Medio
+119,Permiso para evento,Mesa de partes,Si,3,9,Media,Bajo
+120,Permiso para evento,Catastro,Si,1,16,Alta,Medio
+121,Reclamo ciudadano,Mesa de partes,Si,6,13,Alta,Alto
+122,Licencia de funcionamiento,Desarrollo economico,Si,6,16,Media,Alto
+123,Pago de arbitrios,Asesoria legal,No,1,13,Media,Alto
+124,Acceso a informacion publica,Asesoria legal,Si,2,13,Media,Medio
+125,Reclamo ciudadano,Asesoria legal,No,5,13,Baja,Alto
+126,Acceso a informacion publica,Mesa de partes,No,4,24,Alta,Alto
+127,Pago de arbitrios,Mesa de partes,Si,3,9,Media,Bajo
+128,Permiso para evento,Mesa de partes,Si,5,13,Baja,Medio
+129,Permiso para evento,Mesa de partes,Si,6,10,Media,Medio
+130,Reclamo ciudadano,Atencion al ciudadano,Si,4,9,Baja,Bajo
+131,Permiso de construccion,Asesoria legal,No,4,34,Alta,Alto
+132,Permiso para evento,Catastro,Si,5,13,Baja,Medio
+133,Constancia de posesion,Mesa de partes,Si,4,19,Media,Alto
+134,Licencia de funcionamiento,Obras privadas,No,5,25,Media,Alto
+135,Permiso para evento,Obras privadas,Si,5,12,Media,Medio
+136,Certificado de residencia,Atencion al ciudadano,Si,4,13,Baja,Medio
+137,Pago de arbitrios,Asesoria legal,No,6,20,Alta,Alto
+138,Acceso a informacion publica,Mesa de partes,No,4,18,Baja,Alto
+139,Pago de arbitrios,Asesoria legal,No,1,11,Media,Medio
+140,Pago de arbitrios,Asesoria legal,Si,3,15,Alta,Medio
+141,Acceso a informacion publica,Asesoria legal,No,4,17,Alta,Alto
+142,Reclamo ciudadano,Desarrollo economico,No,4,17,Alta,Alto
+143,Licencia de funcionamiento,Mesa de partes,Si,1,15,Baja,Medio
+144,Pago de arbitrios,Desarrollo economico,Si,4,6,Media,Bajo
+145,Constancia de posesion,Mesa de partes,Si,4,15,Media,Alto
+146,Constancia de posesion,Desarrollo economico,Si,3,8,Media,Medio
+147,Permiso para evento,Obras privadas,Si,2,10,Baja,Bajo
+148,Reclamo ciudadano,Asesoria legal,No,6,16,Baja,Alto
+149,Permiso para evento,Mesa de partes,Si,5,12,Media,Medio
+150,Licencia de funcionamiento,Asesoria legal,Si,1,10,Media,Medio
+151,Permiso para evento,Obras privadas,No,2,14,Media,Alto
+152,Certificado de residencia,Atencion al ciudadano,Si,6,7,Alta,Medio
+153,Reclamo ciudadano,Catastro,Si,3,5,Media,Bajo
+154,Reclamo ciudadano,Obras privadas,No,2,17,Baja,Medio
+155,Reclamo ciudadano,Desarrollo economico,Si,4,13,Alta,Alto
+156,Permiso para evento,Mesa de partes,Si,2,17,Alta,Medio
+157,Acceso a informacion publica,Mesa de partes,No,1,13,Baja,Medio
+158,Acceso a informacion publica,Asesoria legal,No,3,14,Media,Alto
+159,Certificado de residencia,Catastro,Si,5,6,Media,Bajo
+160,Permiso para evento,Asesoria legal,Si,4,6,Baja,Bajo
+161,Reclamo ciudadano,Catastro,Si,2,11,Alta,Bajo
+162,Permiso para evento,Obras privadas,Si,6,17,Media,Medio
+163,Constancia de posesion,Catastro,Si,4,13,Media,Alto
+164,Acceso a informacion publica,Desarrollo economico,Si,2,11,Alta,Bajo
+165,Acceso a informacion publica,Mesa de partes,Si,2,15,Alta,Medio
+166,Certificado de residencia,Asesoria legal,Si,1,7,Baja,Bajo
+167,Certificado de residencia,Desarrollo economico,No,2,14,Baja,Medio
+168,Certificado de residencia,Desarrollo economico,Si,2,6,Alta,Bajo
+169,Constancia de posesion,Desarrollo economico,Si,2,8,Baja,Bajo
+170,Constancia de posesion,Mesa de partes,Si,2,8,Media,Medio
+171,Constancia de posesion,Obras privadas,Si,6,10,Media,Medio
+172,Permiso para evento,Catastro,No,5,21,Media,Alto
+173,Licencia de funcionamiento,Asesoria legal,No,6,26,Media,Alto
+174,Licencia de funcionamiento,Catastro,No,4,29,Media,Alto
+175,Permiso de construccion,Mesa de partes,Si,2,19,Baja,Medio
+176,Acceso a informacion publica,Catastro,No,5,25,Baja,Alto
+177,Permiso de construccion,Asesoria legal,Si,6,25,Media,Alto
+178,Pago de arbitrios,Catastro,No,4,19,Media,Alto
+179,Permiso de construccion,Obras privadas,Si,6,21,Baja,Alto
+180,Permiso de construccion,Mesa de partes,No,1,24,Media,Alto
+181,Licencia de funcionamiento,Atencion al ciudadano,No,5,20,Media,Alto
+182,Pago de arbitrios,Asesoria legal,Si,3,7,Media,Bajo
+183,Permiso de construccion,Atencion al ciudadano,Si,2,18,Media,Medio
+184,Permiso de construccion,Obras privadas,No,3,26,Baja,Alto
+185,Certificado de residencia,Catastro,No,5,18,Media,Alto
+186,Reclamo ciudadano,Mesa de partes,Si,6,14,Alta,Alto
+187,Constancia de posesion,Desarrollo economico,Si,4,9,Baja,Medio
+188,Certificado de residencia,Catastro,Si,3,6,Baja,Bajo
+189,Acceso a informacion publica,Atencion al ciudadano,Si,1,6,Baja,Bajo
+190,Permiso de construccion,Obras privadas,Si,4,26,Media,Alto
+191,Reclamo ciudadano,Desarrollo economico,No,1,10,Media,Medio
+192,Permiso para evento,Atencion al ciudadano,Si,1,5,Baja,Bajo
+193,Licencia de funcionamiento,Desarrollo economico,Si,2,18,Alta,Alto
+194,Acceso a informacion publica,Mesa de partes,Si,6,12,Media,Medio
+195,Certificado de residencia,Atencion al ciudadano,Si,6,9,Alta,Medio
+196,Pago de arbitrios,Mesa de partes,Si,1,14,Alta,Medio
+197,Pago de arbitrios,Asesoria legal,Si,3,2,Baja,Bajo
+198,Acceso a informacion publica,Desarrollo economico,No,5,18,Media,Alto
+199,Permiso de construccion,Desarrollo economico,Si,4,24,Media,Alto
+200,Acceso a informacion publica,Desarrollo economico,Si,2,7,Baja,Bajo
+201,Certificado de residencia,Obras privadas,Si,6,9,Alta,Medio
+202,Reclamo ciudadano,Desarrollo economico,Si,2,8,Alta,Bajo
+203,Permiso para evento,Catastro,No,5,21,Media,Alto
+204,Constancia de posesion,Catastro,Si,4,17,Media,Alto
+205,Licencia de funcionamiento,Obras privadas,Si,3,10,Media,Medio
+206,Licencia de funcionamiento,Obras privadas,No,1,18,Media,Alto
+207,Pago de arbitrios,Catastro,Si,6,17,Alta,Alto
+208,Acceso a informacion publica,Atencion al ciudadano,Si,2,15,Alta,Medio
+209,Acceso a informacion publica,Asesoria legal,Si,6,13,Baja,Medio
+210,Permiso para evento,Atencion al ciudadano,Si,2,9,Media,Bajo
+211,Pago de arbitrios,Catastro,No,6,13,Media,Alto
+212,Permiso de construccion,Atencion al ciudadano,Si,3,17,Baja,Medio
+213,Acceso a informacion publica,Mesa de partes,Si,2,15,Alta,Medio
+214,Constancia de posesion,Atencion al ciudadano,No,1,22,Media,Alto
+215,Acceso a informacion publica,Desarrollo economico,Si,6,20,Alta,Alto
+216,Acceso a informacion publica,Mesa de partes,Si,2,16,Alta,Medio
+217,Certificado de residencia,Desarrollo economico,No,2,10,Baja,Bajo
+218,Licencia de funcionamiento,Asesoria legal,Si,5,18,Baja,Alto
+219,Constancia de posesion,Desarrollo economico,No,5,24,Alta,Alto
+220,Pago de arbitrios,Obras privadas,Si,2,11,Alta,Bajo
+221,Certificado de residencia,Atencion al ciudadano,Si,4,14,Alta,Medio
+222,Permiso para evento,Catastro,No,4,17,Media,Alto
+223,Constancia de posesion,Obras privadas,Si,4,23,Alta,Alto
+224,Permiso de construccion,Obras privadas,Si,2,23,Baja,Medio
+225,Constancia de posesion,Catastro,Si,2,15,Alta,Alto
+226,Pago de arbitrios,Mesa de partes,Si,3,3,Baja,Bajo
+227,Acceso a informacion publica,Desarrollo economico,Si,1,14,Alta,Medio
+228,Constancia de posesion,Mesa de partes,Si,4,14,Media,Alto
+229,Permiso para evento,Atencion al ciudadano,Si,1,8,Baja,Bajo
+230,Constancia de posesion,Atencion al ciudadano,No,5,16,Media,Alto
+231,Reclamo ciudadano,Mesa de partes,Si,4,12,Media,Medio
+232,Permiso de construccion,Catastro,Si,1,18,Media,Medio
+233,Constancia de posesion,Obras privadas,Si,5,16,Media,Alto
+234,Permiso de construccion,Atencion al ciudadano,No,1,36,Alta,Alto
+235,Licencia de funcionamiento,Catastro,No,1,20,Media,Alto
+236,Licencia de funcionamiento,Obras privadas,No,3,18,Baja,Alto
+237,Acceso a informacion publica,Desarrollo economico,Si,5,12,Media,Medio
+238,Permiso para evento,Asesoria legal,Si,2,12,Baja,Bajo
+239,Licencia de funcionamiento,Obras privadas,Si,2,19,Alta,Alto
+240,Pago de arbitrios,Atencion al ciudadano,Si,1,9,Alta,Bajo
+241,Acceso a informacion publica,Mesa de partes,No,3,17,Baja,Medio
+242,Pago de arbitrios,Asesoria legal,Si,4,8,Media,Medio
+243,Permiso para evento,Obras privadas,No,5,18,Baja,Alto
+244,Permiso de construccion,Catastro,Si,2,20,Media,Medio
+245,Permiso de construccion,Mesa de partes,Si,3,21,Media,Medio
+246,Constancia de posesion,Asesoria legal,Si,4,18,Baja,Alto
+247,Pago de arbitrios,Obras privadas,Si,1,8,Baja,Bajo
+248,Acceso a informacion publica,Atencion al ciudadano,No,6,15,Baja,Alto
+249,Permiso para evento,Mesa de partes,Si,2,14,Alta,Medio
+250,Pago de arbitrios,Atencion al ciudadano,Si,2,7,Media,Bajo
+251,Acceso a informacion publica,Catastro,No,5,20,Baja,Alto
+252,Reclamo ciudadano,Desarrollo economico,No,1,18,Media,Alto
+253,Pago de arbitrios,Atencion al ciudadano,Si,3,5,Media,Bajo
+254,Reclamo ciudadano,Asesoria legal,No,4,13,Baja,Alto
+255,Constancia de posesion,Asesoria legal,Si,1,17,Alta,Alto
+256,Permiso de construccion,Atencion al ciudadano,Si,3,21,Alta,Alto
+257,Certificado de residencia,Mesa de partes,No,2,12,Baja,Medio
+258,Acceso a informacion publica,Atencion al ciudadano,Si,4,22,Alta,Alto
+259,Permiso de construccion,Mesa de partes,Si,6,27,Media,Alto
+260,Pago de arbitrios,Atencion al ciudadano,Si,3,9,Media,Bajo
+261,Permiso para evento,Asesoria legal,Si,2,19,Alta,Medio
+262,Constancia de posesion,Desarrollo economico,Si,1,19,Alta,Alto
+263,Reclamo ciudadano,Desarrollo economico,Si,6,15,Baja,Medio
+264,Permiso de construccion,Obras privadas,Si,5,24,Baja,Alto
+265,Permiso de construccion,Atencion al ciudadano,Si,5,25,Alta,Alto
+266,Acceso a informacion publica,Atencion al ciudadano,Si,1,10,Baja,Bajo
+267,Certificado de residencia,Atencion al ciudadano,Si,6,13,Baja,Medio
+268,Reclamo ciudadano,Catastro,Si,6,12,Media,Medio
+269,Licencia de funcionamiento,Desarrollo economico,Si,4,20,Media,Alto
+270,Constancia de posesion,Obras privadas,No,3,19,Media,Alto
+271,Constancia de posesion,Obras privadas,Si,1,15,Media,Medio
+272,Permiso de construccion,Obras privadas,Si,2,19,Baja,Medio
+273,Pago de arbitrios,Atencion al ciudadano,Si,2,10,Alta,Bajo
+274,Constancia de posesion,Catastro,No,4,19,Media,Alto
+275,Permiso de construccion,Catastro,Si,2,20,Baja,Medio
+276,Licencia de funcionamiento,Mesa de partes,Si,5,26,Alta,Alto
+277,Licencia de funcionamiento,Mesa de partes,Si,3,16,Media,Medio
+278,Acceso a informacion publica,Mesa de partes,Si,5,16,Media,Medio
+279,Reclamo ciudadano,Mesa de partes,Si,4,19,Alta,Alto
+280,Permiso de construccion,Desarrollo economico,No,4,30,Media,Alto
+281,Constancia de posesion,Desarrollo economico,Si,4,9,Media,Medio
+282,Constancia de posesion,Asesoria legal,Si,4,15,Media,Alto
+283,Constancia de posesion,Obras privadas,No,3,19,Baja,Alto
+284,Acceso a informacion publica,Atencion al ciudadano,No,5,17,Media,Alto
+285,Acceso a informacion publica,Obras privadas,Si,4,11,Media,Medio
+286,Permiso para evento,Obras privadas,No,5,16,Media,Alto
+287,Constancia de posesion,Atencion al ciudadano,Si,5,19,Alta,Alto
+288,Licencia de funcionamiento,Atencion al ciudadano,No,1,22,Baja,Alto
+289,Pago de arbitrios,Desarrollo economico,Si,2,9,Media,Bajo
+290,Licencia de funcionamiento,Asesoria legal,Si,2,17,Media,Medio
+291,Pago de arbitrios,Obras privadas,No,4,21,Alta,Alto
+292,Permiso para evento,Desarrollo economico,No,3,13,Media,Alto
+293,Reclamo ciudadano,Asesoria legal,Si,6,14,Media,Medio
+294,Reclamo ciudadano,Obras privadas,Si,6,13,Media,Medio
+295,Constancia de posesion,Obras privadas,Si,6,18,Baja,Alto
+296,Permiso para evento,Desarrollo economico,Si,5,16,Baja,Medio
+297,Constancia de posesion,Mesa de partes,Si,5,13,Baja,Alto
+298,Certificado de residencia,Asesoria legal,Si,1,9,Media,Bajo
+299,Permiso de construccion,Asesoria legal,No,1,28,Alta,Alto
+300,Permiso para evento,Asesoria legal,Si,3,5,Media,Bajo
+301,Permiso de construccion,Asesoria legal,Si,5,17,Media,Alto
+302,Pago de arbitrios,Desarrollo economico,No,1,17,Alta,Alto
+303,Reclamo ciudadano,Mesa de partes,Si,5,12,Media,Medio
+304,Permiso para evento,Asesoria legal,Si,4,17,Alta,Alto
+305,Reclamo ciudadano,Desarrollo economico,No,3,19,Baja,Medio
+306,Reclamo ciudadano,Asesoria legal,Si,6,13,Media,Medio
+307,Certificado de residencia,Desarrollo economico,Si,6,17,Alta,Medio
+308,Permiso de construccion,Catastro,Si,2,26,Alta,Alto
+309,Certificado de residencia,Mesa de partes,Si,2,6,Media,Bajo
+310,Acceso a informacion publica,Obras privadas,Si,5,13,Baja,Medio
+311,Licencia de funcionamiento,Asesoria legal,Si,3,18,Baja,Medio
+312,Reclamo ciudadano,Asesoria legal,Si,3,7,Media,Bajo
+313,Certificado de residencia,Desarrollo economico,Si,4,11,Media,Bajo
+314,Permiso para evento,Atencion al ciudadano,No,2,18,Alta,Alto
+315,Acceso a informacion publica,Mesa de partes,No,1,21,Baja,Medio
+316,Certificado de residencia,Atencion al ciudadano,Si,2,10,Media,Bajo
+317,Permiso para evento,Mesa de partes,Si,6,11,Media,Medio
+318,Permiso para evento,Mesa de partes,Si,5,10,Media,Medio
+319,Permiso para evento,Asesoria legal,No,6,14,Baja,Alto
+320,Permiso de construccion,Mesa de partes,Si,6,16,Baja,Alto
+321,Permiso para evento,Mesa de partes,Si,2,15,Alta,Medio
+322,Pago de arbitrios,Catastro,No,4,17,Media,Alto
+323,Permiso de construccion,Desarrollo economico,No,4,22,Media,Alto
+324,Reclamo ciudadano,Catastro,Si,5,12,Media,Medio
+325,Certificado de residencia,Catastro,Si,3,3,Baja,Bajo
+326,Licencia de funcionamiento,Asesoria legal,Si,1,11,Baja,Bajo
+327,Permiso de construccion,Atencion al ciudadano,Si,5,17,Media,Alto
+328,Licencia de funcionamiento,Catastro,Si,5,12,Baja,Alto
+329,Reclamo ciudadano,Desarrollo economico,No,6,16,Media,Alto
+330,Constancia de posesion,Asesoria legal,Si,4,13,Media,Alto
+331,Constancia de posesion,Asesoria legal,Si,5,17,Media,Alto
+332,Acceso a informacion publica,Asesoria legal,Si,2,8,Baja,Bajo
+333,Permiso para evento,Desarrollo economico,No,3,15,Alta,Alto
+334,Pago de arbitrios,Catastro,Si,2,6,Media,Bajo
+335,Certificado de residencia,Obras privadas,Si,4,11,Alta,Medio
+336,Licencia de funcionamiento,Obras privadas,Si,5,13,Media,Alto
+337,Certificado de residencia,Catastro,Si,3,2,Media,Bajo
+338,Certificado de residencia,Desarrollo economico,No,1,13,Media,Medio
+339,Certificado de residencia,Catastro,No,5,16,Media,Alto
+340,Acceso a informacion publica,Obras privadas,Si,5,19,Alta,Alto
+341,Acceso a informacion publica,Desarrollo economico,Si,4,11,Baja,Bajo
+342,Licencia de funcionamiento,Obras privadas,Si,5,19,Media,Alto
+343,Constancia de posesion,Desarrollo economico,Si,4,15,Media,Alto
+344,Acceso a informacion publica,Obras privadas,No,4,25,Alta,Alto
+345,Constancia de posesion,Desarrollo economico,No,4,25,Baja,Alto
+346,Licencia de funcionamiento,Mesa de partes,No,6,18,Baja,Alto
+347,Certificado de residencia,Mesa de partes,No,1,14,Baja,Medio
+348,Licencia de funcionamiento,Atencion al ciudadano,Si,5,20,Alta,Alto
+349,Pago de arbitrios,Mesa de partes,Si,6,7,Baja,Bajo
+350,Pago de arbitrios,Desarrollo economico,Si,1,5,Media,Bajo

@@ -1,0 +1,72 @@
+{% extends "layout.html" %}
+{% block content %}
+<section class="card">
+    <div class="section-header">
+        <div>
+            <h2>Detalle del trámite {{ tramite.codigo }}</h2>
+            <p>Seguimiento del expediente y resultado del modelo predictivo.</p>
+        </div>
+        <a class="button secondary" href="{{ url_for('index') }}">Volver</a>
+    </div>
+
+    <div class="detail-grid">
+        <div>
+            <h3>Ciudadano</h3>
+            <p><strong>DNI:</strong> {{ tramite.dni }}</p>
+            <p><strong>Nombres:</strong> {{ tramite.nombres }}</p>
+            <p><strong>Teléfono:</strong> {{ tramite.telefono or '-' }}</p>
+            <p><strong>Correo:</strong> {{ tramite.correo or '-' }}</p>
+        </div>
+        <div>
+            <h3>Trámite</h3>
+            <p><strong>Tipo:</strong> {{ tramite.tipo_tramite }}</p>
+            <p><strong>Área:</strong> {{ tramite.area }}</p>
+            <p><strong>Estado:</strong> {{ tramite.estado }}</p>
+            <p><strong>Fecha:</strong> {{ tramite.fecha_registro }}</p>
+        </div>
+        <div>
+            <h3>Predicción ML</h3>
+            <p><strong>Riesgo:</strong> <span class="badge riesgo-{{ tramite.riesgo_retraso|lower }}">{{ tramite.riesgo_retraso }}</span></p>
+            <p><strong>Probabilidad:</strong> {{ '%.2f'|format(tramite.probabilidad * 100) }}%</p>
+            <p><strong>Prioridad:</strong> {{ tramite.prioridad }}</p>
+            <p><strong>Documentos completos:</strong> {{ tramite.documentos_completos }}</p>
+        </div>
+    </div>
+</section>
+
+<section class="card">
+    <h2>Cambiar estado y simular notificación</h2>
+    <form method="post" action="{{ url_for('cambiar_estado', tramite_id=tramite.id) }}" class="form-grid">
+        <label>Nuevo estado
+            <select name="estado" required>
+                {% for item in estados %}
+                    <option value="{{ item }}" {% if item == tramite.estado %}selected{% endif %}>{{ item }}</option>
+                {% endfor %}
+            </select>
+        </label>
+        <label class="full">Comentario u observación
+            <textarea name="comentario" rows="3" placeholder="Ej. Falta adjuntar copia de DNI.">{{ tramite.observaciones or '' }}</textarea>
+        </label>
+        <div class="full actions">
+            <button class="button" type="submit">Actualizar estado</button>
+        </div>
+    </form>
+</section>
+
+<section class="card">
+    <h2>Historial del trámite</h2>
+    {% if historial %}
+        <ul class="timeline">
+            {% for h in historial %}
+            <li>
+                <strong>{{ h.fecha }}</strong><br>
+                Estado: {{ h.estado_anterior or 'Inicio' }} → {{ h.estado_nuevo }}<br>
+                <small>{{ h.comentario or 'Sin comentario' }}</small>
+            </li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p>No hay historial.</p>
+    {% endif %}
+</section>
+{% endblock %}
