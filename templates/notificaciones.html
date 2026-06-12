@@ -1,0 +1,30 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<section class="card">
+    <h2>Notificaciones del Sistema</h2>
+
+    {% if notificaciones %}
+    <table>
+        <thead>
+            <tr>
+                <th>Fecha</th>
+                <th>Expediente</th>
+                <th>Mensaje</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for n in notificaciones %}
+            <tr>
+                <td>{{ n.fecha }}</td>
+                <td>{{ n.codigo }}</td>
+                <td>{{ n.mensaje }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    {% else %}
+        <p>No existen notificaciones registradas.</p>
+    {% endif %}
+</section>
+{% endblock %}

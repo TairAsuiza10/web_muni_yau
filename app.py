@@ -21,7 +21,15 @@ from typing import Any
 
 import joblib
 import pandas as pd
-from flask import Flask, flash, redirect, render_template, request, url_for
+from flask import (
+    Flask,
+    flash,
+    redirect,
+    render_template,
+    request,
+    url_for,
+    session,
+)
 
 from generar_dataset import generar_dataset
 from train_model import entrenar_modelo
@@ -55,13 +63,28 @@ AREAS = [
 ]
 
 CARGAS = ["Baja", "Media", "Alta"]
-ESTADOS = ["Registrado", "En revision", "Derivado", "Observado", "Aprobado", "Rechazado", "Finalizado"]
+ESTADOS = [ "Registrado",
+    "En revision",
+    "Derivado",
+    "Observado",
+    "En proceso",
+    "Aprobado",
+    "Rechazado",
+    "Finalizado",
+    "Vencido"]
 
 
 def conectar_db() -> sqlite3.Connection:
     conn = sqlite3.connect(DB_PATH)
     conn.row_factory = sqlite3.Row
     return conn
+
+def usuario_logueado():
+    return "usuario_id" in session
+
+
+def tiene_rol(*roles):
+    return session.get("rol") in roles
 
 
 def inicializar_db() -> None:
@@ -126,7 +149,52 @@ def inicializar_db() -> None:
         FOREIGN KEY (tramite_id) REFERENCES tramites(id)
     )
     """
+
 )
+               
+        conn.execute(
+            """
+            CREATE TABLE IF NOT EXISTS usuarios (
+                id INTEGER PRIMARY KEY AUTOINCREMENT,
+                usuario TEXT NOT NULL UNIQUE,
+                password TEXT NOT NULL,
+                rol TEXT NOT NULL
+            )
+            """
+        )
+        
+        
+        admin = conn.execute(
+            "SELECT * FROM usuarios WHERE usuario = ?",
+            ("admin",)
+        ).fetchone()
+
+        if not admin:
+            conn.execute(
+                """
+                INSERT INTO usuarios (usuario, password, rol)
+                VALUES (?, ?, ?)
+                """,
+                ("admin", "123456", "administrador")
+            )
+
+            conn.execute(
+                """
+                INSERT INTO usuarios (usuario, password, rol)
+                VALUES (?, ?, ?)
+                """,
+                ("mesa", "123456", "mesa_partes")
+            )
+
+            conn.execute(
+                """
+                INSERT INTO usuarios (usuario, password, rol)
+                VALUES (?, ?, ?)
+                """,
+                ("trabajador", "123456", "trabajador")
+            )
+        
+        
         conn.commit()
 
 
@@ -185,9 +253,47 @@ def crear_codigo_expediente() -> str:
     fecha = datetime.now().strftime("%Y%m%d%H%M%S")
     return f"YAU-{fecha}"
 
+@app.route("/login", methods=["GET", "POST"])
+def login():
+
+    if request.method == "POST":
+
+        usuario = request.form.get("usuario")
+        password = request.form.get("password")
+
+        with conectar_db() as conn:
+            user = conn.execute(
+                """
+                SELECT * FROM usuarios
+                WHERE usuario = ? AND password = ?
+                """,
+                (usuario, password)
+            ).fetchone()
+
+        if user:
+            session["usuario_id"] = user["id"]
+            session["usuario"] = user["usuario"]
+            session["rol"] = user["rol"]
+
+            flash("Bienvenido al sistema.", "success")
+            return redirect(url_for("index"))
+
+        flash("Usuario o contraseña incorrectos.", "error")
+
+    return render_template("login.html")
+
+@app.route("/logout")
+def logout():
+    session.clear()
+    flash("Sesión cerrada.", "success")
+    return redirect(url_for("login"))
+
 
 @app.route("/")
 def index():
+
+    if not usuario_logueado():
+        return redirect(url_for("login"))
     with conectar_db() as conn:
         tramites = conn.execute(
             """
@@ -202,6 +308,10 @@ def index():
 
 @app.route("/registrar", methods=["GET", "POST"])
 def registrar():
+
+    if not usuario_logueado():
+        return redirect(url_for("login"))
+
     if request.method == "POST":
         dni = request.form.get("dni", "").strip()
         nombres = request.form.get("nombres", "").strip()
@@ -309,8 +419,14 @@ def registrar():
 
 
 @app.route("/tramite/<int:tramite_id>")
+
 def detalle_tramite(tramite_id: int):
+    
+    
+    
     with conectar_db() as conn:
+        
+        
         tramite = conn.execute(
             """
             SELECT t.*, c.dni, c.nombres, c.telefono, c.correo, c.direccion
@@ -401,6 +517,14 @@ def consulta_dni():
 
 @app.route("/reportes")
 def reportes():
+
+    if not usuario_logueado():
+        return redirect(url_for("login"))
+
+    if not tiene_rol("administrador"):
+        flash("No tiene permisos para acceder.", "error")
+        return redirect(url_for("index"))
+
     with conectar_db() as conn:
         total = conn.execute("SELECT COUNT(*) AS total FROM tramites").fetchone()["total"]
         por_riesgo = conn.execute(
@@ -431,7 +555,24 @@ def reportes():
         por_area=por_area,
         criticos=criticos,
     )
+    
+    
+@app.route("/notificaciones")
+def notificaciones():
+    with conectar_db() as conn:
+        notificaciones = conn.execute(
+            """
+            SELECT n.*, t.codigo
+            FROM notificaciones n
+            JOIN tramites t ON t.id = n.tramite_id
+            ORDER BY n.fecha DESC
+            """
+        ).fetchall()
 
+    return render_template(
+        "notificaciones.html",
+        notificaciones=notificaciones
+    )
 
 if __name__ == "__main__":
     inicializar_db()
