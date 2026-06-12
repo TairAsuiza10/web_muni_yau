@@ -1,0 +1,51 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+<section class="card">
+    <h2>Consulta Ciudadana por DNI</h2>
+
+    <form method="post">
+        <label>DNI
+            <input type="text" name="dni" required>
+        </label>
+
+        <button class="button" type="submit">
+            Buscar
+        </button>
+    </form>
+</section>
+
+{% if tramites %}
+<section class="card">
+    <h2>Resultados</h2>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Código</th>
+                <th>Ciudadano</th>
+                <th>Tipo</th>
+                <th>Estado</th>
+                <th>Riesgo</th>
+                <th>Prioridad</th>
+            </tr>
+        </thead>
+
+        <tbody>
+        {% for t in tramites %}
+            <tr>
+                <td>{{ t.codigo }}</td>
+                <td>{{ t.nombres }}</td>
+                <td>{{ t.tipo_tramite }}</td>
+                <td>{{ t.estado }}</td>
+                <td>{{ t.riesgo_retraso }}</td>
+                <td>{{ t.prioridad }}</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+</section>
+{% endif %}
+
+{% endblock %}

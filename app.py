@@ -114,6 +114,19 @@ def inicializar_db() -> None:
             )
             """
         )
+        
+        conn.execute(
+    """
+    CREATE TABLE IF NOT EXISTS notificaciones (
+        id INTEGER PRIMARY KEY AUTOINCREMENT,
+        tramite_id INTEGER NOT NULL,
+        mensaje TEXT NOT NULL,
+        fecha TEXT NOT NULL,
+        leida INTEGER DEFAULT 0,
+        FOREIGN KEY (tramite_id) REFERENCES tramites(id)
+    )
+    """
+)
         conn.commit()
 
 
@@ -270,6 +283,18 @@ def registrar():
                 """,
                 (tramite_id, None, "Registrado", "Registro inicial del trámite.", fecha),
             )
+            
+            conn.execute(
+    """
+    INSERT INTO notificaciones (tramite_id, mensaje, fecha)
+    VALUES (?, ?, ?)
+    """,
+    (
+        tramite_id,
+        f"Su trámite {codigo} fue registrado correctamente y se encuentra en estado Registrado.",
+        fecha,
+    ),
+)
             conn.commit()
 
         flash(f"Trámite registrado. Riesgo: {riesgo}. Prioridad: {prioridad}.", "success")
@@ -331,11 +356,48 @@ def cambiar_estado(tramite_id: int):
             """,
             (tramite_id, estado_anterior, nuevo_estado, comentario, fecha),
         )
+        
+        conn.execute(
+    """
+    INSERT INTO notificaciones (tramite_id, mensaje, fecha)
+    VALUES (?, ?, ?)
+    """,
+    (
+        tramite_id,
+        f"Su trámite cambió de estado: {estado_anterior} → {nuevo_estado}.",
+        fecha,
+    ),
+)
+        
+        
         conn.commit()
 
     flash("Estado actualizado. Se simuló la notificación al ciudadano.", "success")
     return redirect(url_for("detalle_tramite", tramite_id=tramite_id))
 
+@app.route("/consulta", methods=["GET", "POST"])
+def consulta_dni():
+    tramites = None
+
+    if request.method == "POST":
+        dni = request.form.get("dni")
+
+        with conectar_db() as conn:
+            tramites = conn.execute(
+                """
+                SELECT t.*, c.nombres
+                FROM tramites t
+                JOIN ciudadanos c ON c.id = t.ciudadano_id
+                WHERE c.dni = ?
+                ORDER BY t.id DESC
+                """,
+                (dni,),
+            ).fetchall()
+
+    return render_template(
+        "consulta.html",
+        tramites=tramites
+    )
 
 @app.route("/reportes")
 def reportes():
